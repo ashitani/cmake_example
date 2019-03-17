@@ -10,13 +10,22 @@ cmakeで統一する場合は素直にpybind11もcmakeでインストール
 結びついてしまう。デフォルトだとシステムのpythonを見に行くようなので、
 pyenv等を使っている場合はそちらのパスを指定するとよい。
 
-# ビルドと実行
+# pybindのビルドとインストール
 
 ```
 mkdir build
 cd build
 cmake .. -DPYTHON_EXECUTABLE=`which python`
 make
-python -c "import addmdl;print(addmdl.add(10,20))"
+sudo make install
 ```
 
+# pybindのビルドとインストール
+
+```
+mkdir build
+cd build
+cmake ..
+make
+python -c "import addmdl;print(addmdl.add(10,20))"
+```
