@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.9)
+project(test)
+set(CMAKE_CXX_STANDARD 14)
+add_executable(test test.cpp)
+include_directories(/usr/local/Cellar/glfw/3.2.1/include/)
+target_link_libraries(test /usr/local/Cellar/glfw/3.2.1/lib/libglfw.dylib)
+target_link_libraries(test "-framework OpenGL")
