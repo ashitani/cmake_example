@@ -9,6 +9,7 @@ find_packageは[こちら](https://qiita.com/osamu0329/items/bd3d1e50edf37c277fa
 # ビルドと実行
 
 ```
+export OpenCV_DIR=~/git/opencv/build
 mkdir build
 cd build
 cmake ..
