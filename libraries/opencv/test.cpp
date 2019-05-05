@@ -2,7 +2,7 @@
 
 int main()
 {
-    cv::Mat img = cv::imread("../../data/cmake.png");
+    cv::Mat img = cv::imread("../../../data/cmake.png");
     cv::imshow("Hello", img);
     cv::waitKey(0);
     return 0;

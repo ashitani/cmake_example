@@ -151,7 +151,7 @@ void SimpleGUI::initContents() {
   clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
   // Image data
-  my_texture.setImage("../../data/cmake.png", 640, 480);
+  my_texture.setImage("../../../data/cmake.png", 640, 480);
 }
 
 void SimpleGUI::drawContents() {
