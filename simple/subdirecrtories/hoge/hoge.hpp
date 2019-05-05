@@ -1,6 +1,4 @@
-#ifndef __HOGE_H
-#define __HOGE_H
+#pragma once
 
 int add(int,int);
 
-#endif
