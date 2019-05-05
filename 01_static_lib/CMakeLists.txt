@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.9)
 project(test)
-add_executable(test test.c)
-add_library(hoge STATIC hoge.c)
+add_executable(test test.cpp)
+add_library(hoge STATIC hoge.cpp)
 target_link_libraries(test hoge)
