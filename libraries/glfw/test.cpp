@@ -104,8 +104,6 @@ int main(void)
 
 
     /* Create image texture */
-//    string filename = "/Users/ashiya/git/cmake_example/data/cmake.png.bin";
-//    string filename = "cat.raw";
     string filename = "cmake.png.bin";
     GLuint texID;
 
