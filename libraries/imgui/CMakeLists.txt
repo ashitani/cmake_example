@@ -1,10 +1,14 @@
 cmake_minimum_required(VERSION 3.9)
-project(test)
 set(CMAKE_CXX_STANDARD 14)
 
+set(TARGET main)
+
+project(${TARGET})
+
 # Main
-add_executable(test
-    test.cpp
+add_executable(
+    ${TARGET}
+    ${TARGET}.cpp
     imgui/imgui.cpp
     imgui/imgui_draw.cpp
     imgui/imgui_widgets.cpp
@@ -25,7 +29,8 @@ include_directories(
 )
 
 # link
-target_link_libraries(test
+target_link_libraries(
+    ${TARGET}
     ${SDL2_LIBRARIES}
     "-framework OpenGL"
     "-framework Cocoa"

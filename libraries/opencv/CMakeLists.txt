@@ -1,9 +1,14 @@
 cmake_minimum_required(VERSION 3.9)
-project(test)
 set(CMAKE_CXX_STANDARD 14)
-add_executable(test test.cpp)
+
+set(TARGET main)
+
+project(${TARGET})
+add_executable(${TARGET} ${TARGET}.cpp)
+
+set(OpenCV_DIR $ENV{HOME}/git/opencv/build)
 find_package(OpenCV REQUIRED)
 if(OpenCV_FOUND)
-    target_include_directories(test PUBLIC ${OpenCV_INCLUDE_DIRS})
-    target_link_libraries(test ${OpenCV_LIBS})
+    target_include_directories(${TARGET} PUBLIC ${OpenCV_INCLUDE_DIRS})
+    target_link_libraries(${TARGET} ${OpenCV_LIBS})
 endif()

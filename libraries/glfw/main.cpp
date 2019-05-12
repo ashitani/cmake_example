@@ -104,7 +104,7 @@ int main(void)
 
 
     /* Create image texture */
-    string filename = "cmake.png.bin";
+    string filename = "../../../data/img.bin";
     GLuint texID;
 
     GLuint programId = createShader();

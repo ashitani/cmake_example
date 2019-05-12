@@ -43,6 +43,8 @@ void ImageTexture::setImage(string filename, int w, int h) {
   glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
   glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA,
                GL_UNSIGNED_BYTE, my_image_data);
+
+  delete [] my_image_data;
 }
 
 void* ImageTexture::getOpenglTexture() { return (void*)(intptr_t)my_opengl_texture; }

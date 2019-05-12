@@ -1,3 +1,5 @@
 stb_image.h
 build/
 imgui/
+
+.vscode
