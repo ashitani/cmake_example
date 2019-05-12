@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.9)
-project(test)
-add_executable(test test.cpp)
-add_library(hoge STATIC hoge.cpp)
-target_link_libraries(test hoge)
+set(CMAKE_CXX_STANDARD 14)
+
+set(TARGET main)
+set(DLIB hoge)
+
+add_executable(${TARGET} ${TARGET}.cpp)
+add_library(${DLIB} STATIC ${DLIB}.cpp)
+target_link_libraries(${TARGET} ${DLIB})
