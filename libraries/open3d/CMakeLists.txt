@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.9)
 
 set(TARGET main)
+set(TARGET2 flow)
 
 project(${TARGET})
 set(CMAKE_CXX_STANDARD 14)
@@ -15,7 +16,14 @@ if (Open3D_FOUND)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${Open3D_EXE_LINKER_FLAGS}")
 
     link_directories(${Open3D_LIBRARY_DIRS})
+
     add_executable(${TARGET} ${TARGET}.cpp)
     target_link_libraries(${TARGET} ${Open3D_LIBRARIES})
     target_include_directories(${TARGET} PUBLIC ${Open3D_INCLUDE_DIRS})
+
+    add_executable(${TARGET2} ${TARGET2}.cpp)
+    target_link_libraries(${TARGET2} ${Open3D_LIBRARIES})
+    target_include_directories(${TARGET2} PUBLIC ${Open3D_INCLUDE_DIRS})
+    
 endif()
+
