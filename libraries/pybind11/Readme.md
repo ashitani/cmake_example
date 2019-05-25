@@ -14,6 +14,11 @@ find_package(python REQUIRED)
 合わせたライブラリが生成されます。
 
 
+# numpy行列の扱い
+
+
+
+
 # pybindのビルドとインストール
 
 ```
