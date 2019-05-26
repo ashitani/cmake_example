@@ -11,6 +11,10 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra -O2")
 # python path
 find_package(python REQUIRED)
 
+
+#eigen
+include_directories("/usr/local/Cellar/eigen/3.3.7/include/eigen3")
+
 # pybind11
 set(PYBIND11_CPP_STANDARD -std=c++14)
 find_package(pybind11 REQUIRED)
