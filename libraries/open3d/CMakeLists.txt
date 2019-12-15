@@ -1,9 +1,8 @@
 cmake_minimum_required(VERSION 3.9)
 
-set(TARGET main)
-set(TARGET2 flow)
+set(TARGETS main;flow;flow2)
 
-project(${TARGET})
+project(main)
 set(CMAKE_CXX_STANDARD 14)
 
 set(Open3D_DIR $ENV{HOME}/git/Open3D/install)
@@ -17,13 +16,18 @@ if (Open3D_FOUND)
 
     link_directories(${Open3D_LIBRARY_DIRS})
 
-    add_executable(${TARGET} ${TARGET}.cpp)
-    target_link_libraries(${TARGET} ${Open3D_LIBRARIES})
-    target_include_directories(${TARGET} PUBLIC ${Open3D_INCLUDE_DIRS})
+    foreach(target IN LISTS TARGETS)
 
-    add_executable(${TARGET2} ${TARGET2}.cpp)
-    target_link_libraries(${TARGET2} ${Open3D_LIBRARIES})
-    target_include_directories(${TARGET2} PUBLIC ${Open3D_INCLUDE_DIRS})
-    
+        if(target MATCHES "flow2")
+        message("found flow2")
+            add_executable(${target} ${target}.cpp PointCloudBuffer.cpp)
+        else()
+            add_executable(${target} ${target}.cpp)
+        endif()
+        target_link_libraries(${target} ${Open3D_LIBRARIES})
+        target_include_directories(${target} PUBLIC ${Open3D_INCLUDE_DIRS})
+
+    endforeach()
+
 endif()
 
