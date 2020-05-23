@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.9)
 
-set(TARGETS main;flow;flow2)
+set(TARGETS main;flow)
 
 project(main)
 set(CMAKE_CXX_STANDARD 14)

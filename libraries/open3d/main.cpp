@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 
-  string filename = "../../data/torus.ply";
+  string filename = "../../../data/torus.ply";
 
   auto cloud_ptr = make_shared<geometry::PointCloud>();
 

@@ -1,4 +1,5 @@
-#include <sdl2/sdl.h>
+//#include <sdl2/sdl.h>
+#include <SDL.h>
 #include <SDL2/SDL2_gfxPrimitives.h>
 
 // reffered to https://blog.cormoran-web.com/blog/sdl2.drawshapes/
